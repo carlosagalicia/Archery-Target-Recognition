@@ -76,8 +76,6 @@ while capture.isOpened():
         x1, y1, w, h = cv2.boundingRect(card)
 
         # Calculate the contour area
-        epsilon = 0.09 * cv2.arcLength(card, True)
-        approx = cv2.approxPolyDP(card, epsilon, True)
         area = cv2.contourArea(card)
         print("Area: ", area)
 
